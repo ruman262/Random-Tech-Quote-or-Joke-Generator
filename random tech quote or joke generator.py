@@ -1,0 +1,26 @@
+import random
+import time
+tech_quotes=[
+    "There are only two hard things in Computer Science: cache invalidation and naming things. -Phil Karlton",
+    "Any sufficiently advanced technology is indistinguishable from magic. -Arthur C. Clarke",
+    "Talk is cheap. Show me the code.-Linus Torvalds",
+    "It's not a bug - it's an undocumented feature.",
+    "Programmer: A machine that turns coffee into code.",
+    "To understand recursion, one must first understand recursion.",
+    "In a world without fences and walls, who needs Gates Windows?",
+    "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "I would love to change the world, but they won't give me the source code.",
+    "There is no place like 127.0.0.1"] 
+# Function to continuously show jokes
+def show_jokes_forever(interval_seconds=5):
+    print("\nRandom Tech Quote/Joke Generator (Press Ctrl+C to stop)\n")
+    try:
+        while True:
+            print(random.choice(tech_quotes))
+            print("\n- Powered by Python\n")
+            time.sleep(interval_seconds)
+    except KeyboardInterrupt:
+        print("\nThanks for smiling!")
+
+# Call the function
+show_jokes_forever()
